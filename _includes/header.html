@@ -1,0 +1,38 @@
+<header class="header">
+
+    <a href="{{ '/' | relative_url }}" class="logo">
+        <span class="logo-symbol">V</span>
+        <span class="logo-text">
+            VALTERRA <span>& CO.</span>
+            <small>BUILDING BEYOND BOUNDARIES</small>
+        </span>
+    </a>
+
+    <button class="menu-toggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="main-navigation">
+        ☰
+    </button>
+
+    <nav class="navigation" id="main-navigation">
+
+        <a href="{{ '/' | relative_url }}"
+           {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+
+        <a href="{{ '/about/' | relative_url }}"
+           {% if page.url contains '/about' %}aria-current="page"{% endif %}>About</a>
+
+        <a href="{{ '/services/' | relative_url }}"
+           {% if page.url contains '/services' %}aria-current="page"{% endif %}>Services</a>
+
+        <a href="{{ '/pricing/' | relative_url }}"
+           {% if page.url contains '/pricing' %}aria-current="page"{% endif %}>Pricing</a>
+
+        <a href="{{ '/contact/' | relative_url }}"
+           class="nav-cta"
+           {% if page.url contains '/contact' %}aria-current="page"{% endif %}>Contact Us</a>
+
+    </nav>
+
+</header>
